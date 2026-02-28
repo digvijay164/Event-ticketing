@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground bg-fixed;
+    background-image: radial-gradient(circle at 50% -20%, #18181b, #09090b);
+  }
+}
+
+/* Base styles for scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Wagmi custom modal overrides for dark theme */
+.ju367v1h {
+  --rk-blurs-modalOverlay: blur(4px) !important;
+  --rk-colors-modalBackdrop: rgba(0, 0, 0, 0.6) !important;
+  --rk-colors-modalBackground: #18181b !important;
+  --rk-colors-modalText: #fafafa !important;
+}
